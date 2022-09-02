@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>formulário bhaskara</title>
+  </head>
+  <body>
+    <form>
+      <label for="inpValorX">valor x: </label>
+      <input type="number" id="inpValorX" />
+      <br />
+      <label for="inpValorY">valor y:</label>
+      <input type="number" id="inpValorY" />
+    </form>
+    <button onclick="calcula_soma()">fazer a soma</button>
+    <div id="resultado"></div>
+    <script>
+      function calcula_soma() {
+        const valX = Number(document.getElementById("inpValorX").value);
+        const valY = Number(document.getElementById("inpValorY").value);
+        const soma = valX + valY;
+        document.getElementById("resultado").innerHTML = `soma" = ${soma}`;
+      }
+    </script>
+  </body>
+</html>
